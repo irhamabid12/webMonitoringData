@@ -1,5 +1,5 @@
-<div class="container">
-    <title>Dashboard</title>
+
+<div class="container mt-5">
     <h4 class="fw-bold mb-5">Akun</h4>
 
     <div class="container">
@@ -30,7 +30,10 @@
                         </button>
                     </div>
                 </div>                
-            </div>          
+            </div> 
+            <div class="card-footer">
+                <button type="button" class="btn btn-danger float-end btn-sm" onclick="logout()"><i class="bi bi-box-arrow-right"></i> &nbsp;Logout</button>
+            </div>         
         </div>
     </div>
 </div>

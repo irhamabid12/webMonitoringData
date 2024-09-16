@@ -1,10 +1,11 @@
 @extends('layout.app')
 
+@section('title', 'Dashboard')
 @section('content')
 <div class="card text-center" style="position: fixed; height: 100%; width: 100%;">
   <div class="card-body overflow-auto">
-      <div class="tab-content" id="tabContent-dashboard">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+      <div class="tab-content" id="tabContent-dashboard" style="overflow-y: hidden">
+          <div class="tab-pane fade show active h-100" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
               @include('dashboard')
           </div>
           <div class="tab-pane fade" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab" tabindex="0">

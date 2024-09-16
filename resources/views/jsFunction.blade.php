@@ -53,4 +53,16 @@
             }
         });
     }
+
+    function logout() {
+        $.ajax({
+            type: "GET",
+            url: "{{ route('logout') }}",
+            success: function(response) {
+                location.reload();
+            }, error: function(xhr, status, error) {
+                swal("Error", xhr.responseText, "error");
+            }
+        });
+    }
 </script>

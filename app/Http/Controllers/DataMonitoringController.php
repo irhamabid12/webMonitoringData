@@ -13,8 +13,8 @@ class DataMonitoringController extends Controller
     public function insertData(Request $request){
         DB::table('data_monitoring')->insert([
             'user_id' => 1,
-            'driver_status' => 'mengantuk',
-            'tombol_status' => $request->status ?? null,
+            'driver_status' => $request->status_mengantuk == true ? 'mengantuk' : 'tidak mengantuk',
+            'tombol_status' => $request->button_status == true ? 'ditekan' : 'tidak ditekan',
             'created_at' => Carbon::now(),
         ]);
     }
@@ -31,5 +31,14 @@ class DataMonitoringController extends Controller
         ];
 
         return event(new StatusConnection($data));
+    }
+
+    public function gpsdata(){
+        return DB::table('data_monitoring')->insert(
+            ['user_id' => 1,
+            'latitude' => $request->latitude ?? null,
+            'longitude' => $request->longitude ?? null, 
+            'created_at' => Carbon::now()]
+        );
     }
 }

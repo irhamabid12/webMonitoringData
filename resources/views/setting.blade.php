@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
     <title>Dashboard</title>
     <h4 class="fw-bold mb-5">Setelan</h4>
 

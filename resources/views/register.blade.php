@@ -1,7 +1,7 @@
 @extends('layout.app')
-
+@section('title', 'Registrasi')
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <div class="col-md-12 text-center mt-2">
         <h4 class="fw-bold mb-4">Registrasi</h4>
     </div>

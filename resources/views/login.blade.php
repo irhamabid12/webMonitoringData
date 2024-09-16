@@ -1,5 +1,6 @@
 @extends('layout.app')
 
+@section('title', 'Login')
 @section('content')
 <div class="container">
 
@@ -25,9 +26,9 @@
                             <div class="mb-3">
                                 <div class="mb-2 w-100">
                                     <label class="text-muted" for="password">Password</label>
-                                    <a href="forgot.html" class="float-end">
+                                    {{-- <a href="forgot.html" class="float-end">
                                         Lupa Password?
-                                    </a>
+                                    </a> --}}
                                 </div>
                                 <input id="password" type="password" class="form-control" name="password" required>
                                 <div class="invalid-feedback">

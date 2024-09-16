@@ -9,3 +9,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/insertData', 'App\Http\Controllers\DataMonitoringController@insertData');
 Route::get('/connection', 'App\Http\Controllers\DataMonitoringController@connection');
+Route::get('/gpsdata', 'App\Http\Controllers\DataMonitoringController@gpsdata');
