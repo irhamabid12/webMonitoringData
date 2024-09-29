@@ -26,8 +26,8 @@ Route::get('/' , function () {
 Route::group(['prefix'=>'index','as'=>'index.', 'middleware' => ['auth']], function () {
     Route::get('/account', 'App\Http\Controllers\AccountController@getAccount')->name('account');
     Route::group(['prefix'=>'riwayat','as'=>'riwayat.', 'middleware' => ['auth']], function () { 
-        Route::get('/getRiwayatHarian', 'App\Http\Controllers\RiwayatCOntroller@getRiwayatHarian')->name('getRiwayatHarian');
-        Route::get('/getRiwayatBulanan', 'App\Http\Controllers\RiwayatCOntroller@getRiwayatBulanan')->name('getRiwayatBulanan');
-        Route::get('/getRiwayatTahunan', 'App\Http\Controllers\RiwayatCOntroller@getRiwayatTahunan')->name('getRiwayatTahunan');
+        Route::get('/getRiwayatHarian', 'App\Http\Controllers\RiwayatController@getRiwayatHarian')->name('getRiwayatHarian');
+        Route::get('/getRiwayatBulanan', 'App\Http\Controllers\RiwayatController@getRiwayatBulanan')->name('getRiwayatBulanan');
+        Route::get('/getRiwayatTahunan', 'App\Http\Controllers\RiwayatController@getRiwayatTahunan')->name('getRiwayatTahunan');
     });
 });
