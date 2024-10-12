@@ -37,6 +37,7 @@ class DataMonitoringController extends Controller
             'ssid' => $request->ssid ?? null
         ];
 
+        // Broadcast event untuk update status connection
         return event(new StatusConnection($data));
     }
 
