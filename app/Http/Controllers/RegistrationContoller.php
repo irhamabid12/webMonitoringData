@@ -22,7 +22,7 @@ class RegistrationContoller extends Controller
     
             return redirect('/login');
         } catch (\Throwable $th) {
-            dd($th);    
+            return redirect('/register');    
         }
     }
 }
