@@ -11,8 +11,15 @@ use Illuminate\Support\Facades\DB;
 class DataMonitoringController extends Controller
 {
     public function insertData(Request $request){
+        // Ambil latitude dan longitude dari session
+        $latitude = Session::get('latitude');
+        $longitude = Session::get('longitude');
+
+        // Simpan data ke database
         DB::table('data_monitoring')->insert([
             'user_id' => 1,
+            'latitude' => $latitude ?? null,
+            'longitude' => $longitude ?? null,
             'driver_status' => $request->status_mengantuk == true ? 'mengantuk' : 'tidak mengantuk',
             'tombol_status' => $request->button_status == true ? 'ditekan' : 'tidak ditekan',
             'created_at' => Carbon::now(),
@@ -34,11 +41,8 @@ class DataMonitoringController extends Controller
     }
 
     public function gpsdata(){
-        return DB::table('data_monitoring')->insert(
-            ['user_id' => 1,
-            'latitude' => $request->latitude ?? null,
-            'longitude' => $request->longitude ?? null, 
-            'created_at' => Carbon::now()]
-        );
+        // Simpan latitude dan longitude ke dalam session
+        Session::put('latitude', $request->latitude ?? null);
+        Session::put('longitude', $request->longitude ?? null);
     }
 }
