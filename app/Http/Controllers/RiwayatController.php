@@ -47,7 +47,7 @@ class RiwayatController extends Controller
                     ->where('user_id', auth()->user()->id)
                     ->whereMonth('created_at', $month)
                     ->whereYear('created_at', $year)
-                    ->where('tombol_status', 'ditekan')
+                    ->where('tombol_status', true)
                     ->select(DB::raw('COUNT(*) as jumlah'))
                     ->first();
 
@@ -56,7 +56,7 @@ class RiwayatController extends Controller
                     ->where('user_id', auth()->user()->id)
                     ->whereMonth('created_at', $month)
                     ->whereYear('created_at', $year)
-                    ->where('tombol_status', 'tidak ditekan')
+                    ->where('tombol_status', false)
                     ->select(DB::raw('COUNT(*) as jumlah'))
                     ->first();
 
@@ -110,7 +110,7 @@ class RiwayatController extends Controller
         $queryTekan = DB::table('data_monitoring')
             ->where('user_id', auth()->user()->id)
             ->whereYear('created_at', $year)
-            ->where('tombol_status', 'ditekan')
+            ->where('tombol_status', true)
             ->select(DB::raw('COUNT(*) as jumlah'))
             ->first();
 
@@ -118,7 +118,7 @@ class RiwayatController extends Controller
         $queryTidakTekan = DB::table('data_monitoring')
             ->where('user_id', auth()->user()->id)
             ->whereYear('created_at', $year)
-            ->where('tombol_status', 'tidak ditekan')
+            ->where('tombol_status', false)
             ->select(DB::raw('COUNT(*) as jumlah'))
             ->first();
 
@@ -179,7 +179,7 @@ class RiwayatController extends Controller
         $queryTekan = DB::table('data_monitoring')
             ->where('user_id', auth()->user()->id)
             ->whereBetween(DB::raw('YEAR(created_at)'), [$startyear, $endyear])
-            ->where('tombol_status', 'ditekan')
+            ->where('tombol_status', true)
             ->select(DB::raw('COUNT(*) as jumlah'))
             ->first();
 
@@ -187,7 +187,7 @@ class RiwayatController extends Controller
         $queryTidakTekan = DB::table('data_monitoring')
             ->where('user_id', auth()->user()->id)
             ->whereBetween(DB::raw('YEAR(created_at)'), [$startyear, $endyear])
-            ->where('tombol_status', 'tidak ditekan')
+            ->where('tombol_status', false)
             ->select(DB::raw('COUNT(*) as jumlah'))
             ->first();
 

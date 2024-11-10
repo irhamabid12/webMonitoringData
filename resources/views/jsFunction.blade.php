@@ -23,7 +23,7 @@
         clearTimeout(timeout);
 
         // Set a new timeout for 5 seconds to revert to not connected
-        timeout = setTimeout(setNotConnected, 5000);
+        timeout = setTimeout(setNotConnected, 60000);
     });
 
     function setNotConnected() {

@@ -209,8 +209,8 @@
                                 <div class="card shadow-sm">
                                     <div class="card-body text-start">
                                         <span class="card-text"><b>${value.created_at}</b></span><br>
-                                        <span class="card-text">Driver Status : ${value.driver_status}</span><br>
-                                        <span class="card-text">Tombol Status : ${value.tombol_status}</span><br>
+                                        <span class="card-text">Driver Status : ${value.driver_status == 'true' ? 'Mengantuk' : 'Tidak Mengantuk'}</span><br>
+                                        <span class="card-text">Tombol Status : ${value.tombol_status == 'true' ? 'Ditekan' : 'Tidak Ditekan'}</span><br>
                                         <span class="card-text">Waktu Tombol Ditekan : ${value.created_at}</span>
                                     </div>
                                 </div>
@@ -247,8 +247,8 @@
                                 <div class="card shadow-sm">
                                     <div class="card-body text-start">
                                         <span class="card-text"><b>${value.created_at}</b></span><br>
-                                        <span class="card-text">Driver Status : ${value.driver_status}</span><br>
-                                        <span class="card-text">Tombol Status : ${value.tombol_status}</span><br>
+                                        <span class="card-text">Driver Status : ${value.driver_status == 'true' ? 'Mengantuk' : 'Tidak Mengantuk'}</span><br>
+                                        <span class="card-text">Tombol Status : ${value.tombol_status == 'true' ? 'Ditekan' : 'Tidak Ditekan'}</span><br>
                                         <span class="card-text">Waktu Tombol Ditekan : ${value.created_at}</span>
                                     </div>
                                 </div>
@@ -286,8 +286,8 @@
                                 <div class="card shadow-sm">
                                     <div class="card-body text-start">
                                         <span class="card-text"><b>${value.created_at}</b></span><br>
-                                        <span class="card-text">Driver Status : ${value.driver_status}</span><br>
-                                        <span class="card-text">Tombol Status : ${value.tombol_status}</span><br>
+                                        <span class="card-text">Driver Status : ${value.driver_status == 'true' ? 'Mengantuk' : 'Tidak Mengantuk'}</span><br>
+                                        <span class="card-text">Tombol Status : ${value.tombol_status == 'true' ? 'Ditekan' : 'Tidak Ditekan'}</span><br>
                                         <span class="card-text">Waktu Tombol Ditekan : ${value.created_at}</span>
                                     </div>
                                 </div>
