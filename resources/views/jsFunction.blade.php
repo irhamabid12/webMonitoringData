@@ -17,7 +17,11 @@
            $('#ip-connection').text('IP Address : ' + data.data.ip_address); 
            $('#ssid-connection').text('SSID : ' + data.data.ssid);
            $('#driver-name').text(data.data.driver);
-
+           if (data.data.status_gps == 'true') {
+               $('#gps-status').html(`Terdeteksi <i class="bi bi-check-circle text-success"></i>`);
+           } else {
+               $('#gps-status').html(`Tidak Terdeteksi <i class="bi bi-x-circle text-danger"></i>`);
+           }
         }
 
         clearTimeout(timeout);

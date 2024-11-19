@@ -31,7 +31,8 @@ class DataMonitoringController extends Controller
             'driver' => ($driver->first_name ?? '') . ' ' . ($driver->last_name ?? ''),
             'status_connection' => $request->status_connection ?? null,
             'ip_address' => $request->ip_address ?? null,
-            'ssid' => $request->ssid ?? null
+            'ssid' => $request->ssid ?? null,
+            'status_gps' => $request->status_gps ?? null
         ];
 
         // Broadcast event untuk update status connection

@@ -30,7 +30,10 @@
                             <br>
                             <br>
                             <h5 class="fw-bold">Sensor</h5>
-                            <span class="fs-8">lorem ipsum</span>
+                            <br>
+                            <span class="fw-bold">Sensor GPS</span>
+                            <br>
+                            <span class="fs-8" id="gps-status">Tidak Terdeteksi <i class="bi bi-x-circle text-danger"></i></span>
                         </div>
                     </div>
                 </div>
