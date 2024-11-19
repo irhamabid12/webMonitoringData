@@ -17,7 +17,7 @@
            $('#ip-connection').text('IP Address : ' + data.data.ip_address); 
            $('#ssid-connection').text('SSID : ' + data.data.ssid);
            $('#driver-name').text(data.data.driver);
-           if (data.data.status_gps == 'true') {
+           if (data.data.status_gps == '1') {
                $('#gps-status').html(`Terdeteksi <i class="bi bi-check-circle text-success"></i>`);
            } else {
                $('#gps-status').html(`Tidak Terdeteksi <i class="bi bi-x-circle text-danger"></i>`);
@@ -27,7 +27,7 @@
         clearTimeout(timeout);
 
         // Set a new timeout for 5 seconds to revert to not connected
-        timeout = setTimeout(setNotConnected, 60000);
+        timeout = setTimeout(setNotConnected, 10000);
     });
 
     function setNotConnected() {
@@ -36,6 +36,7 @@
         $('#ip-connection').text('');
         $('#ssid-connection').text('');
         $('#driver-name').text('');
+        $('#gps-status').html(`Tidak Terdeteksi <i class="bi bi-x-circle text-danger"></i>`);
     }
 </script>
 <script>
